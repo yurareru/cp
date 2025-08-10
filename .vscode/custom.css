@@ -1,0 +1,13 @@
+.monaco-tl-twistie,
+.line-numbers {
+    color: #FF66AB !important;
+}
+
+.active.selected .monaco-icon-label a {
+    font-weight: 600;
+    color: #FF22AB !important;
+}
+
+.relative-current-line-number {
+    color: #c60059 !important;
+}

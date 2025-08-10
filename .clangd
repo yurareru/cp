@@ -1,0 +1,23 @@
+CompileFlags:
+  Add:
+    - "-target"
+    - "x86_64-pc-windows-gnu"
+    # - "-D__GCC_HAVE_DWARF2_CFI_ASM=1"
+    # - "-D__NO_INLINE__"
+    # - "-D__CLANG_MAX_ALIGN_T_DEFINED"
+    # - "-Dmax_align_t=std::max_align_t"
+    - "-IC:/Users/hp/scoop/apps/gcc/current/include/c++/13.2.0"
+    - "-IC:/Users/hp/scoop/apps/gcc/current/include/c++/13.2.0/x86_64-w64-mingw32"
+    - "-IC:/Users/hp/scoop/apps/gcc/current/lib/gcc/x86_64-w64-mingw32/13.2.0/include"
+    - "-IC:/Users/hp/scoop/apps/gcc/current/x86_64-w64-mingw32/include"
+    - "-std=c++20"
+    - "-xc++"
+    # - "-D__GNUC__=13"
+    # - "-D__GNUG__=13"
+    # - "-D__GXX_EXPERIMENTAL_CXX0X__"
+Diagnostics:
+  Suppress:
+    - "no_member"
+
+Index:
+  Background: Skip
