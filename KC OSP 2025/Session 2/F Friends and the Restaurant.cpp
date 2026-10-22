@@ -8,17 +8,18 @@ void solve() {
     vector<int> f(n);
     for (int i = 0; i < n; i++) cin >> f[i];
     for (int i = 0; i < n; i++) {
-        int t; cin >> t;
+        int t;
+        cin >> t;
         f[i] = t - f[i];
     }
 
     sort(f.begin(), f.end());
-    int l = 0, r = n-1, ans = 0;
+    int l = 0, r = n - 1, ans = 0;
     while (l < r) {
         while (l < r && f[l] + f[r] < 0) l++;
         if (l >= r) break;
         ans++;
-        l++; r--;
+        l++, r--;
     }
     cout << ans << endl;
 }

@@ -2,7 +2,7 @@
 #define ll long long
 using namespace std;
 
-signed main() {
+int main() {
     ios_base::sync_with_stdio(false);
     int t;
     cin >> t;
@@ -16,8 +16,8 @@ signed main() {
         }
         sort(A, A + max);
         int sum = 0;
-        for (int i = max - 2; i >= n; i-=2) sum += A[i];
-        
+        for (int i = max - 2; i >= n; i -= 2) sum += A[i];
+
         cout << sum << endl;
     }
 }

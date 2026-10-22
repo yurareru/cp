@@ -8,9 +8,9 @@ int main() {
 
     int a, b, start, end;
     cin >> a >> b >> start >> end;
-    
+
     int x = lcm(a, b);
-    
+
     int first = ((start + x - 1) / x) * x;
     int count = 0;
 

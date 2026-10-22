@@ -1,28 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
+using ll = long long;
+using pii = pair<int, int>;
+using vi = vector<int>;
+
+#define pb push_back
 #define berak break
-#define Bismillah ios_base::sync_with_stdio(0);
-#define AC cin.tie(0);
+#define Bismillah ios_base::sync_with_stdio(false);
+#define AC cin.tie(nullptr);
 
-const int MOD = 1e9 + 7;
-const int INF = 1e9;
+constexpr char nl = '\n';
+constexpr int MOD = 1e9 + 7;
+constexpr int INF = 1e9;
+constexpr int MAX_N = 1005;
 
-ll binpow(ll a, ll n) {
-    if (n == 0) return 1;
-    a %= MOD;
-    ll res = binpow(a, n / 2);
-    res = res * res % MOD;
-    if (n & 1) res = res * a % MOD;
-    return res;
-}
-
-void solve() {
-    int n;
-    cin >> n;
-    cout << n;
-}
+void solve();
 
 int main() {
     Bismillah AC;
@@ -30,4 +23,10 @@ int main() {
     // cin >> tc;
     while (tc--) solve();
     return 0;
+}
+
+void solve() {
+    int n;
+    cin >> n;
+    cout << n;
 }

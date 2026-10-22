@@ -52,14 +52,12 @@ void solve() {
     cout << dist[finish] + 1 << endl;
 
     vector<int> path;
-    for (int u = finish; u != start; u = prv[u])
-        path.push_back(u);
+    for (int u = finish; u != start; u = prv[u]) path.push_back(u);
     path.push_back(start);
 
     reverse(path.begin(), path.end());
 
-    for (auto p : path)
-        cout << p + 1 << " ";
+    for (auto p : path) cout << p + 1 << " ";
 }
 
 int main() {

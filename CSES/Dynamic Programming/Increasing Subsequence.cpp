@@ -1,5 +1,4 @@
 // https://cses.fi/problemset/task/1145
-#include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,6 +13,14 @@ using namespace std;
 const int MOD = 1e9 + 7;
 const int INF = 1e9;
 const int MAX_N = 2e5 + 5;
+
+void solve();
+
+int main() {
+    Bismillah AC;
+    solve();
+    return 0;
+}
 
 void solve() {
     int n;
@@ -32,12 +39,4 @@ void solve() {
         }
     }
     cout << tails.size() << nl;
-}
-
-int main() {
-    Bismillah AC;
-    int tc = 1;
-    // cin >> tc;
-    while (tc--) solve();
-    return 0;
 }

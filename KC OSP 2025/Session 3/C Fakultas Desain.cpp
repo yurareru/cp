@@ -6,8 +6,9 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
 
-    int n; cin >> n;
-    
+    int n;
+    cin >> n;
+
     vector<bool> is_prime(n + 1, true);
     is_prime[0] = is_prime[1] = false;
 
@@ -27,7 +28,7 @@ int main() {
             r -= 1;
             continue;
         }
-        
+
         if (l + r == n) {
             cout << l << " " << r << nl;
             break;

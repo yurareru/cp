@@ -15,8 +15,8 @@ int main() {
     dp[0] = 0;
     for (int i = 1; i <= x; i++) {
         for (int c : cs) {
-            if (i - c >= 0 && dp[i-c] != LIM) {
-                dp[i] = min(dp[i], 1 + dp[i-c]);
+            if (i - c >= 0 && dp[i - c] != LIM) {
+                dp[i] = min(dp[i], 1 + dp[i - c]);
             }
         }
     }

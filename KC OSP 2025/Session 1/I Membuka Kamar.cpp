@@ -8,8 +8,7 @@ int main() {
     vector<pair<int, int>> guests(n);
 
     for (int i = 0; i < n; i++) {
-        cin >> guests[i].first
-            >> guests[i].second;
+        cin >> guests[i].first >> guests[i].second;
         guests[i].second += guests[i].first;
     }
     sort(guests.begin(), guests.end());

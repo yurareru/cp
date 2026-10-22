@@ -18,10 +18,11 @@ void solve() {
 
     for (int i = 1; i <= n; i++) {
         for (int j = 0; j <= i; j++) {
-            dp[i][j] = max(dp[i][j], dp[i-1][j]); // skip
+            dp[i][j] = max(dp[i][j], dp[i - 1][j]); // skip
 
-            if (j >= 1 && dp[i-1][j-1] != -INF && dp[i-1][j-1] + p[i] >= 0) {
-                dp[i][j] = max(dp[i][j], dp[i-1][j-1] + p[i]); // take
+            if (j >= 1 && dp[i - 1][j - 1] != -INF &&
+                dp[i - 1][j - 1] + p[i] >= 0) {
+                dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + p[i]); // take
             }
         }
     }
@@ -38,7 +39,8 @@ void solve() {
 }
 
 int main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     int t = 1;
     // cin >> t;
     while (t--) solve();

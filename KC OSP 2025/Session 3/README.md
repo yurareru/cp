@@ -1,6 +1,6 @@
 # KC Castle OSP 2025 Session 3
-[Slide]()
-
+[Slide](https://docs.google.com/presentation/d/1BcZerc3TGJ6_Uy4BKLOSCl14XxC8slCj/edit)
+[Pembahasan](https://drive.google.com/file/d/10F5WlTkP3whAtO2pqYGwzHpO5gyZMPXM/view)
 ## Materi
 - Number Theory
 - Combinatorics

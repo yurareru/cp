@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    int n, d; cin >> n >> d;
+    int n, d;
+    cin >> n >> d;
     deque<int> p(n);
 
     for (int i = 0; i < n; i++) {
@@ -18,14 +19,12 @@ int main() {
         int max_power = p.back();
         int needed = (d + max_power) / max_power;
         if (p.size() >= needed) {
-            for (int i = 0; i < needed - 1; i++) {
-                p.pop_front();
-            }
+            for (int i = 0; i < needed - 1; i++) p.pop_front();
             p.pop_back();
             count++;
         } else {
             break;
         }
     }
-    cout << count;
+    cout << count << endl;
 }

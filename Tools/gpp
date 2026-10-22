@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+usage() {
+    echo "Usage: $(basename "$0") file.cpp [-b] [-r] [input]" && exit 1
+}
+
+[[ $# -lt 2 ]] && usage
+
+SOURCE=$1
+shift
+
+[[ ! -f $SOURCE ]] && echo "Error: Source file not found: $SOURCE" && exit 1
+
+DIR=$(dirname "$SOURCE")
+BUILD_DIR="$DIR/.build"
+mkdir -p "$BUILD_DIR"
+
+FILE=$(basename "$SOURCE")
+NAME=$(basename "$SOURCE" .cpp)
+
+EXE="$BUILD_DIR/$NAME"
+
+INPUT=$2
+
+build() {
+    echo "Building $FILE"
+    start=$(date +%s.%N)
+    if g++ -std=c++20 -Wall -Wextra -Wshadow -Wduplicated-cond -Wlogical-op "$SOURCE" -o "$EXE"; then
+        end=$(date +%s.%N)
+        printf "Build done in %.2fs\n" "$(echo "$end-$start" | bc)"
+    else
+        echo "Build failed."
+        exit 1
+    fi
+}
+
+run() {
+    [[ ! -f "$EXE" ]] && echo "Executable not found, falling back to build..." && build
+    echo "Running $NAME"
+    start=$(date +%s.%N)
+    if [[ -z $INPUT ]]; then
+        "$EXE"
+    elif [[ -r "$INPUT" ]]; then
+        cat "$INPUT" | "$EXE"
+    else
+        echo "$INPUT" | "$EXE"
+    fi
+    end=$(date +%s.%N)
+    printf "\nExecute done in %.2fs\n" "$(echo "$end-$start" | bc)"
+}
+
+while getopts "br" OPTION; do
+    case "$OPTION" in
+        b)
+            build ;;
+        r)
+            run ;;
+        *) 
+            usage ;;
+    esac
+done

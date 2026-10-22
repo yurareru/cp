@@ -5,7 +5,8 @@
 using namespace std;
 
 int main() {
-    ll n; cin >> n;
+    ll n;
+    cin >> n;
     ll first_pair = 1;
 
     for (ll i = 1; i * i <= n; i++) {

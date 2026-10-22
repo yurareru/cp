@@ -20,10 +20,8 @@ struct DSU {
     bool unite(int x, int y) {
         x = find(x);
         y = find(y);
-        if (x == y)
-            return 0;
-        if (e[x] > e[y])
-            swap(x, y);
+        if (x == y) return 0;
+        if (e[x] > e[y]) swap(x, y);
         e[x] += e[y];
         e[y] = x;
         return 1;
@@ -54,7 +52,6 @@ int main() {
     Bismillah AC;
     int tc = 1;
     // cin >> tc;
-    while (tc--)
-        solve();
+    while (tc--) solve();
     return 0;
 }

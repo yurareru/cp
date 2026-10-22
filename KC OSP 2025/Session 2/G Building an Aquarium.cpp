@@ -9,7 +9,7 @@ void solve() {
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
-    sort (a.begin(), a.end());
+    sort(a.begin(), a.end());
     int low = 0, high = 2e9, ans = 0;
     while (low <= high) {
         int mid = low + (high - low) / 2; // mid = h

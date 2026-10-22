@@ -1,5 +1,5 @@
 # KC Castle OSP 2025 Session 5
-[Slide]()
+[Slide](https://docs.google.com/presentation/d/1Si6TA7KOorvf0HvNhr5Q_jobhyR8g9MVtjKvat0k2Q4/edit)
 
 ## Materi
 - Non-Classic Dynamic Programming

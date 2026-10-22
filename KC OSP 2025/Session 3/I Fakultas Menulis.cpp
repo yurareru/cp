@@ -1,13 +1,14 @@
 #include <bits/stdc++.h>
-#define nl endl
+#define nl '\n'
 
 using namespace std;
 
 const int MOD = 998244353;
 
 int main() {
-    int q; cin >> q;
-    
+    int q;
+    cin >> q;
+
     string s = "1";
     for (int i = 0; i < q; i++) {
         int val;

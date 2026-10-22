@@ -1,5 +1,5 @@
 # KC Castle OSP 2025 Session 4
-[Slide]()
+[Slide](https://drive.google.com/file/d/1xL-UXlG8yXduYScPjVuZnJWYnHKiRupJ/view)
 
 ## Materi
 - Prefix Sum
