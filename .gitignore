@@ -2,3 +2,6 @@
 *.exe
 .stfolder
 input*.txt
+**/.gpp/**/exe
+**/.gpp/**/*.got
+**/.gpp/**/*.err

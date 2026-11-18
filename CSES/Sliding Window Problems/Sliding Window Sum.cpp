@@ -1,4 +1,4 @@
-// https://cses.fi/problemset/result/13918216/
+// https://cses.fi/problemset/task/3220
 // suffix sum, sliding window
 #include <bits/stdc++.h>
 #define ll long long

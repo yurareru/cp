@@ -1,0 +1,4 @@
+# Show gpp samples as HolyC on GitHub, for fun
+*.in  linguist-language=HolyC linguist-detectable
+*.ans linguist-language=HolyC linguist-detectable
+*.out linguist-language=HolyC linguist-detectable
